@@ -1,0 +1,20 @@
+<!-- 我的订单 -->
+<view wx:if="{{order_list.length==0}}" class="tips">暂无数据!</view>
+<view wx:for="{{order_list}}" class='video'>
+  <image src='{{imgUrl}}{{item.src}}'></image>
+  <view>
+    <view>{{item.mingcheng}}</view>
+    <view class='video-cotent'>
+      <view>订单号:{{item.dingdanhao}}</view>
+      <view>
+        
+      </view>
+    </view>
+    <view>
+      <view>￥{{item.jine}}</view>
+      <view wx:if="{{item.shifouzhifu==0}}" class='video-state-1'>未支付</view>
+      <view wx:if="{{item.shifouzhifu==1}}" class='video-state-2'>已支付</view>
+    </view>
+  </view>
+</view>
+

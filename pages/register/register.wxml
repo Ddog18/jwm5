@@ -1,0 +1,31 @@
+  <form class="form" bindsubmit="form">
+  <view class='register'>
+    <image src='../imgs/login_background.png' mode='widthFix'></image>
+    <image class="userhead" src='{{userInfo.avatarUrl}}' mode='widthFix'></image>
+    <view class='register-title'>账号注册</view>
+    <view class='register-input'>
+      <image src='../imgs/phone.png' mode='widthFix'></image>
+      <input bindinput="phone" name="phone" placeholder='请输入手机号'></input>
+      <!-- <view >验证码</view> -->
+      <button class='code' bindtap="sendCode" disabled="{{smsFlag}}">{{sendTime}}</button>
+    </view>
+    <view class='register-input'>
+      <image src='../imgs/code.png' mode='widthFix'></image>
+      <input name="code" placeholder='请输入验证码'></input>
+    </view>
+    <view class='register-input'>
+      <image src='../imgs/pwd.png' mode='widthFix'></image>
+      <input password='true' name="psw1" placeholder='请输入密码'></input>
+    </view>
+    <view class='register-input'>
+      <image src='../imgs/pwd.png' mode='widthFix'></image>
+      <input password='true' name="psw2" placeholder='确认密码'></input>
+    </view>
+    <!-- <view bindtap='login' class='login'>已有账号? 去登陆</view> -->
+    <button form-type='submit' class='register-sub'>注册</button>
+  </view>
+</form>
+
+ <loading hidden="{{hidden}}">
+  加载中...
+ </loading>

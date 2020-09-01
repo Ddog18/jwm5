@@ -1,0 +1,53 @@
+
+.register{
+  width: 100%;
+}
+.register image{
+  width: 65px;height: 65px;
+  display: block;margin: 8% auto 2% auto;
+}
+.register-title{
+  margin: 5% 0 5% 15%;
+  font-size: 33rpx;font-weight: 600;
+  letter-spacing: 4rpx;color: #fcbd10;
+}
+.register-input{
+  width: 70%;height: 80rpx;
+  margin: 6% auto;position: relative;
+}
+.register-input image{
+  width: 40rpx;height: 40rpx;
+  position: absolute;top: -38%;
+  left: 1%;
+}
+.register-input input{
+  width: 100%;height: 100%;
+  font-size: 25rpx;
+  border-bottom: solid 1.5px #f2f2f2; 
+  box-sizing: border-box;padding: 0 0 0 14%;
+}
+.register-sub{
+  width: 70%;height: 80rpx;
+  margin: 10% auto 0 auto;color: #fff;
+  background: #ffc700;display: flex;
+  align-items: center;justify-content: center;
+  border-radius: 10rpx; font-size: 30rpx;
+  font-weight: 600;letter-spacing: 4rpx;
+}
+.login{
+  margin: 0 0 0 15%;font-size: 25rpx;
+}
+.register-input{
+  position: relative
+}
+.code{
+  position: absolute;
+  top: 20%;left: 75%;
+  font-size: 23rpx;
+  color: #fff;background: #ffc700;
+  width: 25%;height: 60%;
+  display: flex;align-items: center;
+  justify-content: center;
+  border-radius :5px; 
+  z-index: 99;
+}

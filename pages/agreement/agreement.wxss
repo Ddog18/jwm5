@@ -1,0 +1,4 @@
+view{
+  width: 90%;margin: 20rpx auto;
+  letter-spacing: 2rpx;
+}

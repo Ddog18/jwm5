@@ -1,0 +1,28 @@
+<!-- 考试 -->
+<view class='examination-title'>{{name}} <view><text></text>共{{num}}题</view></view>
+<view class='line'></view>
+
+<!-- 内容 -->
+<view wx:if="{{page==0}}"  wx:for="{{tmlist}}">
+  <radio-group data-id="{{item.id}}" bindchange='radio_group'>
+    <view class='examination-subject'>{{index+1}}. {{item.wenti}}</view>
+    <view class='examination-content'><radio value="1" color='red' name="{{item.id}}" />{{item.xuanxiang1}}</view>
+    <view class='examination-content'><radio value="2" color='red' name="{{item.id}}"/>{{item.xuanxiang2}}</view>
+    <view wx:if="{{item.xuanxiang3!=''}}" class='examination-content'>
+      <radio value="3" color='red' name="{{item.id}}"/>{{item.xuanxiang3}}
+    </view>
+    <view wx:if="{{item.xuanxiang4!=''}}" class='examination-content'>
+      <radio value="4" color='red' name="{{item.id}}"/>{{item.xuanxiang4}}
+    </view>
+  </radio-group>
+</view>
+<!-- 考试结果展示 -->
+<view wx:if="{{page==1}}" class="score {{score>=60? 'color1':'color2'}}">{{score}}分</view>
+<view wx:if="{{page==1}}" wx:for="{{error_list}}">
+    <view class='examination-subject'>{{item.wenti}}</view>
+    <view class='examination-content' style="color: red;">{{item.jieshi1}}</view>
+</view>
+<!-- 提交 -->
+<view  wx:if="{{page==0}}" class='submit' bindtap='sub'>确认交卷</view>
+<!-- 返回 -->
+<view  wx:if="{{page==1}}" class='submit' bindtap='sub2'>确 认</view>

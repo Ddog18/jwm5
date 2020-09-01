@@ -1,0 +1,14 @@
+<view class='register'>
+  <image src='../imgs/login_background.png' mode='widthFix'></image>
+  <view class='register-title'>登录</view>
+  <view class='register-input'>
+    <image src='../imgs/phone.png' mode='widthFix'></image>
+    <input placeholder='请输入手机号'></input>
+  </view>
+  <view class='register-input'>
+    <image src='../imgs/pwd.png'mode='widthFix'></image>
+    <input placeholder='请输入密码'></input>
+  </view>
+  <view bindtap='register' class='login'>没有账号? 去注册</view>
+  <view class='register-sub' bindtap='sign'>登录</view>
+</view>

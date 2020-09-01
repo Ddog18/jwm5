@@ -1,0 +1,78 @@
+<!-- 视频播放 -->
+<!-- enable-danmu
+  danmu-btn  -->
+  <txv-video vid="{{vid}}" playerid="{{playerid}}"></txv-video>
+<!-- <video 
+  id="myVideo" 
+  initial-time="{{time}}"
+src="{{src}}" 
+  binderror="videoErrorCallback" 
+  danmu-list="{{danmuList}}" 
+  bindtimeupdate="bindtimeupdate"
+  show-center-play-btn='{{false}}' 
+  show-play-btn="{{true}}" 
+  controls
+  picture-in-picture-mode="{{['push', 'pop']}}"
+  bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+  bindleavepictureinpicture='bindVideoLeavePictureInPicture'
+  enable-auto-rotation='true'
+></video> -->
+<!-- 类目 -->
+<!-- <view><image src="../imgs/1.png"></image></view> -->
+<view class='class'>
+  <view class='{{showintroduce==2 ? "class-color" : ""}}' bindtap='showintroduce' id='2'>
+    章节
+    <view></view>
+  </view>
+  <view class='{{showintroduce==3 ? "class-color" : ""}}' bindtap='showintroduce' id='3'>
+    评价
+    <view></view>
+  </view>
+  <!-- <view bindtap='examination'>
+    去考试
+    <view></view>
+  </view> -->
+</view>
+<view class='line'></view>
+
+<view style='margin: 5% 40rpx;' class='catalog-title'>
+    {{video.mingcheng}}
+</view>
+<!-- 目录 -->
+<view  wx:for="{{chapter}}" class='catalog {{showintroduce==2 ? "" : "hide"}}'>
+
+  <view class='catalog-title'>
+    {{item.nmae}}
+  </view>
+  <view wx:for="{{item.data}}" class='catalog-content'>
+    <image src='../imgs/play.png'></image>
+    <view class="{{item.src==src2 ? 'class-color' : ''}}" data-src="{{item.src}}" bindtap="play">{{item.mingcheng}} ({{item.shichang}})</view>
+  </view>
+  
+</view>
+
+<!-- 弹幕 -->
+<!-- <view class='barrage {{showintroduce==2 ? "" : "hide"}}' >
+  <input bindblur="bindInputBlur" class="weui-input" type="text" placeholder="在此处输入弹幕内容" />
+  <button  bindtap="bindSendDanmu" class="page-body-button" type="primary" formType="submit">发送         </button>
+</view> -->
+
+<!-- 评价 -->
+<view class='evaluate {{showintroduce==3 ? "" : "hide"}}'>
+
+  <view wx:for="{{pjlist}}" class='evaluate-content'>
+    <view>
+      <view>
+        <image src='../imgs/personal1.png'></image>
+        <view>九10415{{index}}</view>
+      </view>
+      <view>5.0分</view>
+    </view>
+    <view>
+      {{item.neirong}}
+    </view>
+  </view>
+
+</view>
+<!--  -->
+<view style='width: 100%;height: 80rpx;'></view>

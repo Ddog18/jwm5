@@ -1,0 +1,9 @@
+<!-- 设置 -->
+<view class='function' bindtap='privacy'>
+  <view>隐私政策</view>
+  <image src='../imgs/arrow.png' mode='widthFix'></image>
+</view>
+<view class='function' bindtap='agreement'>
+  <view>用户协议</view>
+  <image src='../imgs/arrow.png' mode='widthFix'></image>
+</view>

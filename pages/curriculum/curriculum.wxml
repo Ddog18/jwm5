@@ -1,0 +1,11 @@
+<!-- 课程介绍 -->
+
+<view wx:for="{{kc_list}}">
+  <view class='curriculum' data-id='{{item.id}}' bindtap='curriculum_content'>
+    <image src='{{imgUrl}}{{item.src}}' mode="scaleToFill"></image>
+    <view>
+      <view>{{item.mingcheng}}</view>
+      <view>{{item.jianjie}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+.examination-title{
+  display: flex;align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;letter-spacing: 4rpx;
+  margin: 3% auto;font-weight: 600;
+  box-sizing: border-box;padding: 0 4%;
+}
+.examination-title text{
+  color: red;font-size: 40rpx;
+}
+.line{
+  width: 100%;border-bottom: solid 2rpx #f2f2f2; 
+}
+.examination-subject{
+  width: 90%;margin: 6% auto 7% auto;
+  font-size: 28rpx;letter-spacing: 3rpx;
+}
+.examination-content{
+  width: 90%;margin: 7% auto;
+  font-size: 28rpx;letter-spacing: 3rpx;
+  display: flex;align-items: center;
+}
+.examination-content radio{
+  margin: 0 20rpx 0 0;
+  transform:scale(0.8);
+}
+.submit{
+  width: 90%;height: 80rpx;
+  background: red;color: #fff;
+  display: flex;align-items: center;
+  justify-content: center;
+  margin: 4% auto;letter-spacing: 4rpx;
+}
+radio{
+  color: red;
+}
+.score{
+  text-align: center;
+  margin: 5%  auto;font-size: 40rpx;
+  font-weight: 600;
+}
+.color2{
+  color: red;
+}
+.color1{
+  color: #3ccf17;
+}

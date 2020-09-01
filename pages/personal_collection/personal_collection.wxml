@@ -1,0 +1,31 @@
+<!-- 我的收藏 -->
+<view wx:if="{{sp_list.length==0}}" class="tips">暂无数据!</view>
+ <view wx:for="{{sp_list}}">
+  <view class='video' data-id='{{item.id}}' bindtap='video_introduce'>
+    <image src='{{imgUrl}}{{item.fengmian}}'></image>
+    <view>
+      <view>{{item.mingcheng}}</view>
+      <view class='video-cotent'>
+        <view>{{item.fenlei2}}</view>
+        <view>
+          <image src='../imgs/people.png'></image>
+          {{item.renqi}}
+        </view>
+      </view>
+      <!-- 价格1 -->
+      <view wx:if="{{item.jiage==0}}">免费</view>
+      <!-- 价格2 -->
+      <view wx:if="{{item.jiage>0 && item.cuxiao==0}}" class='video-price'>
+        <view>￥{{item.jiage}}</view>
+        <view style='text-decoration:line-through;'></view>
+      </view>
+      <!-- 价格3 -->
+      <view wx:if="{{item.cuxiao==1}}" class='video-price'>
+        <view>￥{{item.cuxiaojiage}}</view>
+        <view style='text-decoration:line-through;'>￥{{item.jiage}}</view>
+        <view>优惠价</view>
+      </view>
+    </view>
+  </view>
+
+</view>

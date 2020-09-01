@@ -1,0 +1,19 @@
+<!-- 我的课程 -->
+<view wx:if="{{sp_list.length==0}}" class="tips">暂无数据!</view>
+<view wx:for="{{sp_list}}">
+  <view class='video' data-id='{{item.id}}' bindtap='video_play'>
+    <image src='{{imgUrl}}{{item.fengmian}}'></image>
+    <view>
+      <view>{{item.mingcheng}}</view>
+      <view class='video-cotent'>
+        <view>{{item.fenlei2}}</view>
+        <view>
+        </view>
+      </view>
+      <view>继续学习</view>
+
+    </view>
+  </view>
+</view>
+
+

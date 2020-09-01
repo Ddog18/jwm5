@@ -1,0 +1,46 @@
+<!-- 视频 -->
+<scroll-view class="scroll-view_1" scroll-x="true" bindscroll="scroll" style="width: 100%" >
+    <view data-id='1' bindtap='video_class' class="{{video_class==1? 'scroll-view_select': ''}}">全部</view>
+    <view class="{{item.id==video_class? 'scroll-view_select': ''}}" wx:for="{{fl_list}}" data-id='{{item.id}}' bindtap='video_class'>{{item.mingcheng}}</view>
+</scroll-view>
+<view class='class'>
+  <view bindtap='video_sort' data-id='1'>默认</view>
+  <view bindtap='video_sort' data-id='2'>最新</view>
+  <view bindtap='video_sort' data-id='3'>热门</view>
+</view>
+<!-- 线 -->
+<view class='line'></view>
+<!-- 视频 -->
+<view wx:if="{{sp_list.length==0}}" class="tips">暂无数据!</view>
+<view wx:for="{{sp_list}}">
+  <view class='video' data-id='{{item.id}}' bindtap='video_introduce'>
+    <image src='{{imgUrl}}{{item.fengmian}}'></image>
+  <view>
+    <view>{{item.mingcheng}}</view>
+    <view class='video-cotent'>
+    <!-- <view>html</view> -->
+    <view>{{item.fenlei2}}</view>
+  <view>
+  <image src='../imgs/people.png'></image>
+  {{item.renqi}}
+  </view>
+  </view>
+  <!-- 价格1 -->
+  <view wx:if="{{isAndroid&&item.jiage==0}}">免费</view>
+  <!-- 价格1.5 -->
+  <view wx:if="{{isIOS&&item.jiage!=0}}">{{ss}}</view>
+  <!-- 价格2 -->
+  <view wx:if="{{isAndroid&&item.jiage>0 && item.cuxiao==0}}" class='video-price'>
+  <view>￥{{item.jiage}}</view>
+  <view style='text-decoration:line-through;'></view>
+  </view>
+  <!-- 价格3 -->
+  <view wx:if="{{isAndroid&&item.cuxiao==1}}" class='video-price'>
+  <view>￥{{item.cuxiaojiage}}</view>
+  <view style='text-decoration:line-through;'>￥{{item.jiage}}</view>
+  <view>优惠价</view>
+  </view>
+  </view>
+  </view>
+
+</view>

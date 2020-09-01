@@ -1,0 +1,65 @@
+.pay{
+  width: 85%;margin: 5% auto;
+}
+.pay-title{
+  color: #727477;font-size: 28rpx;
+  letter-spacing: 4rpx;
+}
+.pay-video{
+  width: 100%;height: 160rpx;
+  margin: 5% 0 10% 0;display: flex;
+  align-items: center;font-size: 28rpx;
+}
+.pay-video image{
+  height: 100%;width: 33%;
+  margin: 0 30rpx 0 0;
+}
+.pay-price{
+  color: red;
+  margin: 60% 0 0 0;
+}
+.pay-discount{
+  width: 100%;display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4% 0;font-size: 28rpx;
+  color: #5c5e61;
+}
+.pay-discount>view:last-of-type{
+  color: red;margin: 0 10% 0 0;
+}
+.pay-mode{
+  width: 100%;margin: 5% 0;
+  display: flex;align-items: center;
+  letter-spacing: 4rpx;
+}
+.pay-mode image{
+  width: 70rpx;height: 70rpx;
+  margin: 0 10rpx 0 0;
+}
+
+
+.bottom{
+  position: absolute;bottom: 0;
+  left: 0;width: 100%;height: 90rpx;
+  display: flex;align-items: center;
+  justify-content: space-between;
+}
+.bottom>view:last-of-type{
+  width: 50%;height: 100%;
+  background: red;color: #fff;
+  display: flex;align-items: center;
+  justify-content: center;font-weight: 600;
+  letter-spacing: 4rpx;font-size: 30rpx;
+}
+.bottom>view:first-of-type{
+  width: 50%;height: 100%;
+  display: flex;align-items: center;
+  justify-content: center;
+  background: #f9fafc;
+  color: #5c5e61;
+}
+.bottom>view:first-of-type text{
+  color: red;font-size: 32rpx;
+  font-weight: 600;margin: 0 0 0 10rpx;
+}

@@ -1,0 +1,12 @@
+/* pages/personal_setup/personal_setup.wxss */
+.function{
+  width: 87%;height: 100rpx;
+  margin: 0 auto;display: flex;
+  align-items: center;justify-content: space-between;
+  font-size: 28rpx;letter-spacing:2rpx;
+  border-bottom: solid 0.5rpx #f2f2f2; 
+  color: #36383a;
+}
+.function image{
+  width: 40rpx;height: 40rpx;
+}

@@ -1,0 +1,141 @@
+<!-- 视频介绍 -->
+<view class='title'>
+  <image src='{{imgUrl}}{{video.fengmian}}'></image>
+  <view class='title-introduce'>
+    <view>{{video.mingcheng}}</view>
+    <view>
+       <text>{{video.dengji}}</text>
+      <text>{{video.shichang}}小时</text>
+      <text>{{video.renqi}}人学</text>
+      <text>10.0分</text>
+    </view>
+  </view>
+</view>
+<!-- 价格 -->
+<!-- <view class='price'>
+  <view>￥{{video.cuxiaojiage}}<text>￥{{video.jiage}}</text></view>
+  <view>活动内下单,享优惠价格</view>
+</view> -->
+
+<!-- <view class='line'></view> -->
+
+<!-- 类目 -->
+<view class='class'>
+  <view class='{{showintroduce==1 ? "class-color" : ""}}' bindtap='showintroduce' id='1'>
+    简介
+    <view></view>
+  </view>
+  <view class='{{showintroduce==2 ? "class-color" : ""}}' bindtap='showintroduce' id='2'>
+    目录
+    <view></view>
+  </view>
+  <view class='{{showintroduce==3 ? "class-color" : ""}}' bindtap='showintroduce' id='3'>
+    评价
+    <view></view>
+  </view>
+</view>
+
+<!-- 简介 -->
+<view class='introduce {{showintroduce==1 ? "" : "hide"}}'>
+  <view></view>
+  <view>简介</view>
+</view>
+<view class='introduce2 {{showintroduce==1 ? "" : "hide"}}'>
+  {{video.jianjie}}
+</view>
+<view class='introduce3 {{showintroduce==1 ? "" : "hide"}}'>
+  <!-- <image src='../imgs/video/3-1.png' mode="widthFix"></image>
+  <image src='../imgs/video/3-2.png' mode="widthFix"></image>
+  <image src='../imgs/video/3-3.png' mode="widthFix"></image>
+  <image src='../imgs/video/3-4.png' mode="widthFix"></image>
+  <image src='../imgs/video/3-5.png' mode="widthFix"></image> -->
+  <rich-text nodes="{{video.jieshao}}"></rich-text>
+</view>
+<view class='introduce {{showintroduce==1 ? "" : "hide"}}'>
+  <view></view>
+  <view>课程须知</view>
+</view>
+<view class='introduce2 {{showintroduce==1 ? "" : "hide"}}'>
+  {{video.jieshao2}}
+</view>
+<view class='introduce {{showintroduce==1 ? "" : "hide"}}'>
+  <view></view>
+  <view>能学到什么?</view>
+</view>
+<view class='introduce2 {{showintroduce==1 ? "" : "hide"}}'>
+  {{video.jieshao3}}
+</view>
+
+<!-- 目录 -->
+<view  wx:for="{{chapter}}" class='catalog {{showintroduce==2 ? "" : "hide"}}'>
+
+  <view class='catalog-title'>
+    {{item.nmae}}
+  </view>
+  <view wx:for="{{item.data}}" class='catalog-content'>
+    <image src='../imgs/play.png'></image>
+    <view>{{item.mingcheng}}{{item.shichang}}</view>
+  </view>
+
+<!--   
+  <view class='catalog-content'>
+    <image src='../imgs/play.png'></image>
+    <view>1-2 we上线流程(07:42)</view>
+  </view>
+  <view class='catalog-content'>
+    <image src='../imgs/play.png'></image>
+    <view>1-3 web项目上程(07:42)</view>
+  </view>
+  <view class='catalog-title'>
+    第二章 课程介绍
+  </view>
+  <view class='catalog-content'>
+    <image src='../imgs/play.png'></image>
+    <view>1-1 web项目上线流程(07:42)</view>
+  </view>
+  <view class='catalog-content'>
+    <image src='../imgs/play.png'></image>
+    <view>1-2 we上线流程(07:42)</view>
+  </view>
+  <view class='catalog-title'>
+    第三章 课程介绍
+  </view>
+  <view class='catalog-content'>
+    <image src='../imgs/play.png'></image>
+    <view>1-1 web项目上线流程(07:42)</view>
+  </view>
+  <view class='catalog-content'>
+    <image src='../imgs/play.png'></image>
+    <view>1-2 we上线流程(07:42)</view>
+  </view> -->
+</view>
+
+<!-- 评价 -->
+<view class='evaluate {{showintroduce==3 ? "" : "hide"}}'>
+
+  <view wx:for="{{pjlist}}" class='evaluate-content'>
+    <view>
+      <view>
+        <image src='../imgs/personal1.png'></image>
+        <view>九10415{{index}}</view>
+      </view>
+      <view>5.0分</view>
+    </view>
+    <view>
+      {{item.neirong}}
+    </view>
+  </view>
+
+</view>
+
+<view style='width: 100%;height: 150rpx;'></view>
+<!-- 底部 -->
+<view class='bottom'>
+  <view>
+    <image wx:if="{{collection==0}}" src='../imgs/sc1.png' bindtap='collection0'></image>
+    <image wx:if="{{collection==1}}" src='../imgs/sc2.png' bindtap='collection1'></image>
+    <view>收藏</view>
+  </view>
+  <view bindtap='pay' wx:if="{{buy==0}}" class="start">立即购买</view>
+  <view wx:if="{{buy==1}}" class='end'>已购买</view>
+</view>

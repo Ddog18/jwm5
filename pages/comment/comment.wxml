@@ -1,0 +1,14 @@
+<!-- 评论 -->
+<view class="star">
+  <image  mode="widthFix"  src="../imgs/sc1.png"></image>
+  <image  mode="widthFix"  src="../imgs/sc1.png"></image>
+  <image  mode="widthFix"  src="../imgs/sc1.png"></image>
+  <image  mode="widthFix"  src="../imgs/sc1.png"></image>
+  <image  mode="widthFix"  src="../imgs/sc1.png"></image>
+</view>
+<!-- 分数 -->
+<view class="score">0 分</view>
+<!-- 输入框 -->
+<textarea class="evaluate" placeholder="请输入评价内容">
+
+</textarea>

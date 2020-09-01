@@ -1,0 +1,82 @@
+<view class="body">
+  <!-- 首页 -->
+  <swiper class='lunbo' indicator-dots='true' autoplay='true' interval='4000'>
+    <swiper-item wx:for="{{lbtlist}}"> 
+      <image data-id="{{item.shangpinid}}" mode="scaleToFill" src='{{imgUrl}}{{item.src}}'></image> 
+    </swiper-item>
+  </swiper>
+  <!--ww-->
+  <view class='introduce'>
+    <view>
+      <image src='../imgs/introduce3.png' mode='widthFix'></image>
+      <view>公司介绍</view>
+    </view>
+    <view>
+      <image src='../imgs/introduce2.png' mode='widthFix'></image>
+      <view>发展历程</view>
+    </view>
+    <view>
+      <image src='../imgs/introduce4.png' mode='widthFix'></image>
+      <view>讲师介绍</view>
+    </view>
+    <view>
+      <image src='../imgs/introduce1.png' mode='widthFix' lazy-load='true'></image>
+      <view>场景实拍</view>
+    </view>
+  </view>
+  <!--  -->
+  <view class='line'></view>
+  <view class='company-introduce'>
+    <image src='../imgs/bj.png' mode="scaleToFill"></image>
+  </view>
+  <view class='line'></view>
+  <!-- 发展历程 -->
+  <view class='development-title'>发展历程</view>
+  <view class='development-content'>
+    <view>
+      <image src='../imgs/cir1.png' mode='widthFix'></image>
+      <view>1997-1998 创业</view>
+    </view>
+    <view>
+      <image src='../imgs/cir2.png' mode='widthFix'></image>
+      <view>1997-1998 发展</view>
+    </view>
+    <view>
+      <image src='../imgs/cir3.png' mode='widthFix'></image>
+      <view>1997-1998 超越</view>
+    </view>
+    <view>
+      <image src='../imgs/cir1.png' mode='widthFix' lazy-load='true'></image>
+      <view>1997-1998 筑梦</view>
+    </view>
+  </view>
+  <view class='line'></view>
+  <!-- 讲师介绍 -->
+  <view class='teacher-title'>教师简介</view>
+  <view class='teacher-content'>
+    <view>
+      <image src='../imgs/teacher1.png' mode='widthFix'></image>
+      <!-- <view>1997-1998 创业</view> -->
+    </view>
+    <view>
+      <image src='../imgs/teacher2.png' mode='widthFix'></image>
+      <!-- <view>1997-1998 发展</view> -->
+    </view>
+    <view>
+      <image src='../imgs/teacher3.png' mode='widthFix'></image>
+      <!-- <view>1997-1998 超越</view> -->
+    </view>
+    <!-- <view>
+      <image src='../imgs/teacher4.png' mode='widthFix' lazy-load='true'></image>
+      <view>1997-1998 筑梦</view>
+    </view> -->
+  </view>
+  <view class='line'></view>
+  <!-- 场景实拍 -->
+  <view class='scene-title'>场景实拍</view>
+  <view class='scene-content'>
+    <image src='../imgs/5.png' mode="scaleToFill"></image>
+    <image src='../imgs/7.jpg' mode="scaleToFill"></image>
+    <image src='../imgs/18.jpg' mode="scaleToFill"></image>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+.curriculum{
+  width: 90%;
+  /*height:320rpx;*/
+   height: 270rpx; 
+  margin: 4% auto;position: relative;
+}
+.curriculum>image{
+  width: 100%;height: 100%;
+  filter: blur(2px) brightness(60%);
+  position: absolute;top: 0;
+  left: 0;z-index: 1;
+}
+.curriculum>view{
+  color: #fff;
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;text-align: center;
+}
+.curriculum>view>view:first-of-type{
+  font-size: 35rpx;font-weight: 600;
+  letter-spacing: 4rpx;
+}
+.curriculum>view>view:last-of-type{
+  font-size: 28rpx;margin: 20rpx 0 0 0;
+  letter-spacing: 3rpx;font-weight: 600;
+}

@@ -1,0 +1,15 @@
+.star{
+  width: 50%;
+  margin: 13% auto 0 auto;display: flex;
+  align-items: center;justify-content: space-between;
+}
+.star image{
+  width: 15%;
+}
+.score{
+  color: #ff7d25;text-align: center;
+  margin: 10% auto 5% auto;font-size: 40rpx;
+}
+.evaluate{
+  
+}

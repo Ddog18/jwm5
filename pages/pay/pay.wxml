@@ -1,0 +1,36 @@
+<!-- 支付 -->
+<view class='pay'>
+  <view class='pay-title'>商品信息</view>
+
+  <view class='pay-video'>
+    <image src='{{imgUrl}}{{video.fengmian}}'></image>
+    <view>
+      <view>{{video.mingcheng}}</view>
+      <view class='pay-price'>￥{{video.jiage}}</view>
+    </view>
+  </view>
+
+  <view class='pay-discount'>
+    <view>商品金额</view>
+    <view style='text-decoration:line-through;' wx:if="{{video.cuxiao==1}}">￥{{video.jiage}}</view>
+    <view wx:if="{{video.cuxiao==0}}">￥{{video.jiage}}</view>
+  </view>
+   <view class='pay-discount' wx:if="{{video.cuxiao==1}}">
+    <view>限时优惠</view>
+    <view>￥{{video.cuxiaojiage}}</view>
+  </view>
+
+  <!-- 支付方式 -->
+  <view class='pay-title' style='margin:50rpx 0 0 0;'>支付方式</view>
+  <view class='pay-mode'>
+    <image src='../imgs/wxpay.png'></image>
+    <view>微信支付</view>
+  </view>
+</view>
+
+<!-- 底部 -->
+<view class='bottom'>
+  <view>实付 <text>￥{{video.cuxiaojiage}}元</text></view>
+  <view bindtap='freepay' wx:if="{{video.cuxiao==0}}">免费获取</view>
+  <view bindtap='pay' wx:if="{{video.cuxiao==1}}">提交订单</view>
+</view>

@@ -1,0 +1,15 @@
+<!-- 我的考试 -->
+<view wx:if="{{fraction_list.length==0}}" class="tips">暂无数据!</view>
+<view wx:for="{{fraction_list}}" class='video' >
+  <image src='{{imgUrl}}{{item.src}}'></image>
+  <view>
+    <view>{{item.mingcheng}}</view>
+    <view class='video-cotent'>
+      <view>{{item.shijian}}</view>
+      <view>
+       
+      </view>
+    </view>
+    <view class="{{item.chengji>=60? 'l':'h'}}">{{item.chengji}}分</view>
+  </view>
+</view>
